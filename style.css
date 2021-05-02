@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100%;
+  width: 100vw;
+  margin: 0;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#map{
+  height: 100%;
+}
+
+#plane {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: auto;
+  width: 400px;
+  z-index: 1000;
+  transform: translate(-50%,-50%);  
+  -webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+}
+
+#actions {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+}
+
+#actions button {
+  
+  margin-bottom: 0.5rem;
+  min-width: 17ch;
+
+}
+
+#places {
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1000;
+}
+
+#places button {
+  
+  margin-top: 0.5rem;
+
+}
+
+button {
+
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-family: system-ui;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  button {
+
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    font-family: system-ui;
+  
+  }
+
+  #places {
+
+    left: 10px;
+    bottom: 60px;
+
+  }
+  
+  #actions {
+
+    right: 10px;
+
+  }
+
+}
