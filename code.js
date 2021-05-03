@@ -68,7 +68,7 @@ function scaleimg() {
 	let scale = 0.1 / aMppx;
 
 	if ( window.noscale )
-		scale = 1.0;
+		scale = 0.5;
 
 	let rotation = window.rot || 0;
 
@@ -78,7 +78,6 @@ function scaleimg() {
 
 
 document.addEventListener("DOMContentLoaded", function (event) {
-
 
 	let map = L.map("map", {
 		center: [42.36, -71.041],
