@@ -23,6 +23,13 @@ function gotoplace(e) {
 
 }
 
+function planeChanged( e ) {
+
+	let aType = document.getElementById( "type" ).value;
+	document.getElementById( "plane" ).src = aType + ".png";
+
+}
+
 function rotr() {
 
 	window.rot += 15;
@@ -104,6 +111,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	document.getElementById( "place-ny" ).onclick = gotoplace;
 	document.getElementById( "place-sydney" ).onclick = gotoplace;
 	document.getElementById( "place-tokyo" ).onclick = gotoplace;
+
+	document.getElementById( "type" ).onchange = planeChanged;
 
 	map.on('zoomend', function() {
 		scaleimg();
